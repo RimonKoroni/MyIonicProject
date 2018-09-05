@@ -1,0 +1,15 @@
+page_gallary {
+  .image-container {
+    min-height: 200px;
+    background-size: cover;
+  }
+
+  .gallary-btn {
+    position: absolute;
+    top: 0;
+    height:100%;
+    width: 100%;
+    padding: 12px 24px;
+    background-color: rgba(1, 1, 1, 0.0);;
+  }
+}

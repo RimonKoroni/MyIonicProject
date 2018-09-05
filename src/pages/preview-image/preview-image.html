@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{image}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="image-container">
+    <div class="image-container" [style.background-image]="'url(assets/imgs/' + image + '.JPG)'">
+    </div>
+  </div>
+</ion-content>
