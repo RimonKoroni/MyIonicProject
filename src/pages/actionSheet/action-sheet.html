@@ -4,8 +4,15 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="action-sheets-basic-page">
+<ion-content>
+
   <button ion-button block (click)="openMenu()">
     Show Action Sheet
+  </button>
+  <button ion-button block (click)="showAlert()">
+    Show alert
+  </button>
+  <button ion-button block (click)="presentToast()">
+    Show toast
   </button>
 </ion-content>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Platform, ActionSheetController } from "ionic-angular";
+import {Platform, ActionSheetController, AlertController, ToastController} from "ionic-angular";
 
 @Component({
   selector: 'page-action-sheet',
@@ -9,7 +9,34 @@ import { Platform, ActionSheetController } from "ionic-angular";
 
 export class ActionSheetPage {
 
-  constructor(public platform: Platform, public actionSheetCtrl:ActionSheetController) { }
+  constructor(public platform: Platform,
+              public alertCtrl:AlertController,
+              public actionSheetCtrl:ActionSheetController,
+              public toastCtrl:ToastController) { }
+
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: 'User was added successfully',
+      duration: 50000,
+      position: 'Bottom',
+      cssClass: 'sucess-toast'
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
+  }
 
   openMenu() {
     let actionSheet = this.actionSheetCtrl.create({
