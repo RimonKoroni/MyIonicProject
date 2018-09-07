@@ -11,6 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GallaryPage } from "../pages/gallary/gallary";
 import { PreviewImagePage } from "../pages/preview-image/preview-image";
+import {ActionSheetPage} from "../pages/actionSheet/action-sheet";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PreviewImagePage } from "../pages/preview-image/preview-image";
     ItemDetailsPage,
     ListPage,
     GallaryPage,
-    PreviewImagePage
+    PreviewImagePage,
+    ActionSheetPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { PreviewImagePage } from "../pages/preview-image/preview-image";
     ItemDetailsPage,
     ListPage,
     GallaryPage,
-    PreviewImagePage
+    PreviewImagePage,
+    ActionSheetPage
   ],
   providers: [
     StatusBar,
